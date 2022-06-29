@@ -28,7 +28,8 @@ public:
 		Capacity = new_capacity;
 		Size = 0;
 		Mas = new Node * [Capacity];
-		for (int i = 0; i < Capacity; i++)Mas[i] = nullptr;
+		for (int i = 0; i < Capacity; i++)
+			Mas[i] = nullptr;
 	};
 	~Hash_table_Chains()//деконструктор 
 	{
@@ -127,7 +128,7 @@ public:
 				Node* cur = A->Mas[i];
 				while (cur)//спускаемся по ней вниз
 				{
-					if (B->Find(cur->Value))Insert(cur->Value, cur->Value);//если такой же ялемент есть во 2 таблице, то заносим его в новую таблицу
+					if (B->Find(cur->Value))Insert(cur->Value, cur->Value);//если такой же элемент есть во 2 таблице, то заносим его в новую таблицу
 					cur = cur->next;
 				}
 			}
